@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+            <div class="hamburger">&#9776;</div>
+        </nav>
+    </header>
+
+   <section id="home" class="section home">
+    <div class="home-container">
+        <div class="home-text">
+    <h1 id="typing-name"></h1>
+    <h2 class="typing"></h2>    
+</div>
+
+        <div class="home-image">
+            <img src="profile.jpg" alt="Profile Image">
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Embedded System Project</h3>
+                <p>Final Requiremet Project of Embedded System (Robot)</p>
+                <button onclick="openModal('robot.jpg')">Click here</button>
+            </div>
+            <div class="project-card">
+                <h3>The Entrepreneurial Mind</h3>
+                <p>A logo of our start-up for our midterm requirements.<br> And a video pitch of our start-up idea in first semester finals</br></p>
+                <button onclick="openModal('entrep.png', 'entrep video.mp4')">Click here</button>
+            </div>
+            <div class="project-card">
+                <h3>Discrete Structures 2</h3>
+                <p>Case Study of Counting Methods, Pigeonhole Principle, and Probability Theory</p>
+               <button onclick="openModal('research.png')">Click here</button>
+            </div>
+            <div class="project-card">
+                <h3>Multimedia System</h3>
+                <p>One of our final requirements in Multimedia System.<br> An anime picture that we edit on adobe</br></p>
+                <button onclick="openModal('anime.png')">Click here</button>
+            </div>
+            <div class="project-card">
+                <h3>Intermediate Programming</h3>
+                <p>An analysis of A* Search and Binary Search Tree Search Final Requiremet</p>
+                <button onclick="openModal('sorting.png')">Click here</button>
+            </div>
+        </div>
+    </section>
+   <div id="projectModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <div class="modal-body" id="modalContent"></div>
+    <button class="next" onclick="nextSlide()">❯</button>
+</div>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="profile1.jpg" alt="Profile">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+               <p id="about-text"></p>           
+            </div>
+        </div>
+    </section>
+
+   <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+
+    <button id="showContactsBtn" class="contact-toggle">
+        Tap to Show Contacts
+    </button>
+
+    <!-- OUTER BIG BOX -->
+    <div class="contact-wrapper hidden">
+
+        <!-- KEEP YOUR ORIGINAL CONTAINER -->
+        <div class="contact-container">
+
+            <div class="contact-card">
+                <a href="https://www.facebook.com/share/1E5jP9FDvw/" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <h3>Facebook</h3>
+                    <p>Ruel Lubiano</p>
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p>+63 9109673977</p>
+            </div>
+
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+63 9109673977</p>
+            </div>
+
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>lubianoruel1@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <a href="https://www.instagram.com/vibesofruel" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>@vibesofruel</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
